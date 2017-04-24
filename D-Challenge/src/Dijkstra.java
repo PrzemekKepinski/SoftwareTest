@@ -83,5 +83,6 @@ public class Dijkstra {
 
         graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
         System.out.println(graph.nodes);
+        System.out.println(graph.nodes);
     }
 }
