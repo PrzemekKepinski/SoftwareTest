@@ -52,7 +52,7 @@ public class Dijkstra {
 
 
     public static void main(String... arg) {
-        Node nodeA = new Node("A");
+/*        Node nodeA = new Node("A");
         Node nodeB = new Node("B");
         Node nodeC = new Node("C");
         Node nodeD = new Node("D");
@@ -70,7 +70,19 @@ public class Dijkstra {
         nodeD.addDestination(nodeE, 2);
         nodeD.addDestination(nodeF, 1);
 
-        nodeF.addDestination(nodeE, 5);
+        nodeF.addDestination(nodeE, 5);*/
+
+        Node nodeA = new Node("A");
+        Node nodeB = new Node("B");
+        Node nodeC = new Node("C");
+        Node nodeD = new Node("D");
+
+        nodeA.addDestination(nodeB, 1);
+        nodeA.addDestination(nodeC, 2);
+        nodeA.addDestination(nodeD, 6);
+        nodeB.addDestination(nodeD, 1);
+        nodeB.addDestination(nodeD, 1);
+
 
         Graph graph = new Graph();
 
@@ -78,11 +90,10 @@ public class Dijkstra {
         graph.addNode(nodeB);
         graph.addNode(nodeC);
         graph.addNode(nodeD);
-        graph.addNode(nodeE);
-        graph.addNode(nodeF);
+        /*graph.addNode(nodeE);
+        graph.addNode(nodeF);*/
 
         graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
-        System.out.println(graph.nodes);
         System.out.println(graph.nodes);
     }
 }
