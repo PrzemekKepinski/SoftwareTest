@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-public class Dijkstra {
+public class DChallenge {
     public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0);
         Set<Node> settledNodes = new HashSet<>();
@@ -79,10 +79,8 @@ public class Dijkstra {
 
         nodeA.addDestination(nodeB, 1);
         nodeA.addDestination(nodeC, 2);
-        nodeA.addDestination(nodeD, 6);
+        nodeA.addDestination(nodeD, 3);
         nodeB.addDestination(nodeD, 1);
-        nodeB.addDestination(nodeD, 1);
-
 
         Graph graph = new Graph();
 
@@ -93,7 +91,7 @@ public class Dijkstra {
         /*graph.addNode(nodeE);
         graph.addNode(nodeF);*/
 
-        graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
+        graph = DChallenge.calculateShortestPathFromSource(graph, nodeA);
         System.out.println(graph.nodes);
     }
 }
